@@ -1,0 +1,106 @@
+/* Background Gradient + full page layout */
+.driver-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  color: #fff;
+}
+
+/* Login card container */
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  padding: 50px 40px;
+  width: 380px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Input fields */
+.login-form input {
+  width: 100%;
+  padding: 15px 18px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 75, 43, 0.5);
+}
+
+/* Error message */
+.error {
+  color: #ff6b6b;
+  margin-bottom: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link span {
+  color: #ff416c;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.signup-link span:hover {
+  color: #ff4b2b;
+}

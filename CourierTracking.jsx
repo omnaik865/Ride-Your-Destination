@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import IndianLocations from "../Data/IndianLocations";
-import "./CourierTracking.css";
 
 // Fix missing marker icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -16,7 +14,7 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
 });
 
-// Auto-zoom helper
+// Helper: auto-zoom to bounds
 const FitBounds = ({ pickup, dropoff }) => {
   const map = useMap();
   useEffect(() => {
@@ -31,40 +29,31 @@ const FitBounds = ({ pickup, dropoff }) => {
 const CourierTracking = ({ selected }) => {
   const [pickupCoords, setPickupCoords] = useState(null);
   const [dropoffCoords, setDropoffCoords] = useState(null);
-  const [reached, setReached] = useState(false);
 
-  // Get coordinates from IndianLocations
-  const fetchCoordinates = (place, setCoords) => {
+  // Call OpenStreetMap Nominatim API
+  const fetchCoordinates = async (place, setCoords) => {
     if (!place) return;
-    const loc = IndianLocations.find(
-      (item) => item.name.toLowerCase() === place.toLowerCase()
-    );
-    if (loc) setCoords([loc.lat, loc.lng]);
+    try {
+      const res = await fetch(
+        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+          place
+        )}`
+      );
+      const data = await res.json();
+      if (data.length > 0) {
+        setCoords([parseFloat(data[0].lat), parseFloat(data[0].lon)]);
+      }
+    } catch (err) {
+      console.error("Geocoding error:", err);
+    }
   };
 
   useEffect(() => {
     if (selected) {
       fetchCoordinates(selected.pickup, setPickupCoords);
       fetchCoordinates(selected.dropoff, setDropoffCoords);
-      setReached(false);
     }
   }, [selected]);
-
-  // Simulate courier movement
-  useEffect(() => {
-    if (!pickupCoords || !dropoffCoords) return;
-
-    let progress = 0;
-    const interval = setInterval(() => {
-      progress += 0.02;
-      if (progress >= 1) {
-        setReached(true);
-        clearInterval(interval);
-      }
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, [pickupCoords, dropoffCoords]);
 
   if (!selected) return <p className="tracking-placeholder">📦 Select a courier to track</p>;
 
@@ -94,12 +83,6 @@ const CourierTracking = ({ selected }) => {
         </MapContainer>
       ) : (
         <p className="tracking-placeholder">⏳ Fetching live location…</p>
-      )}
-
-      {reached && (
-        <div className="reached-banner">
-          ✅ Courier has reached the destination!
-        </div>
       )}
     </div>
   );
