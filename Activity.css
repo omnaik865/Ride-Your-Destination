@@ -1,0 +1,185 @@
+/* PAGE */
+.activity-page {
+  min-height: 100vh;
+  padding: 40px 28px;
+  background: linear-gradient(135deg, #4a90e2, #9013fe);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* TITLE */
+.activity-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* EMPTY MESSAGE */
+.no-activity {
+  font-size: 19px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* LIST */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.activity-card {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* HEADER */
+.ride-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+.ride-icon-wrap {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.ride-icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.ride-title h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* STATUS TAG */
+.status {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 5px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+.completed {
+  background: #00e676;
+  color: #000;
+}
+.cancelled {
+  background: #ff5252;
+  color: #fff;
+}
+.pending {
+  background: #ffea00;
+  color: #000;
+}
+
+/* INFO SECTION */
+.ride-info {
+  margin-top: 10px;
+}
+
+/* ROUTE */
+.route {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+}
+
+.from {
+  font-size: 16px;
+  font-weight: 600;
+}
+.to {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* META DETAILS */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.time,
+.fare {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .activity-page {
+    padding: 25px 15px;
+  }
+
+  .activity-title {
+    font-size: 26px;
+  }
+
+  .activity-card {
+    padding: 18px;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

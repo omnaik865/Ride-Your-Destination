@@ -1,0 +1,129 @@
+/* AboutUs.css */
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: #1c1c1c;
+  line-height: 1.6;
+  padding: 50px 20px;
+  background: #f5f7fa;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.about-story, .about-values, .about-team {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+}
+
+.about-story h2,
+.about-values h2,
+.about-team h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.about-story p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Values Grid */
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #0072ff;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Team Grid */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #0072ff;
+}
+
+.team-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .values-grid, .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

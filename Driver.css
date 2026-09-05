@@ -1,0 +1,105 @@
+/* ===== Layout Wrapper ===== */
+.driver-layout {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f9;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.driver-sidebar {
+  width: 260px;
+  background: #111827; /* Dark Navy */
+  color: white;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.driver-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* ===== Navigation Menu ===== */
+.driver-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.driver-nav ul li {
+  margin-bottom: 18px;
+}
+
+.driver-nav a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 17px;
+  font-weight: 500;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.driver-nav a:hover {
+  background: #374151;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Active Link */
+.driver-nav .active {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== Main Content Area ===== */
+.driver-content {
+  flex: 1;
+  padding: 30px;
+  background: #f9fafb;
+  overflow-y: auto;
+}
+
+.driver-content h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== Responsive (Mobile View) ===== */
+@media (max-width: 768px) {
+  .driver-layout {
+    flex-direction: column;
+  }
+
+  .driver-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 15px;
+  }
+
+  .driver-nav ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .driver-nav a {
+    padding: 10px 14px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .driver-content {
+    padding: 20px;
+  }
+}

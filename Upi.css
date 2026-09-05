@@ -1,0 +1,115 @@
+/* Main Page Container */
+.upi-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4a90e2, #9013fe);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card */
+.upi-card {
+  width: 330px;
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Title */
+.upi-card h2 {
+  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.upi-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.upi-card input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.upi-card input:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
+
+/* Buttons */
+.pay-btn, .back-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Pay Button */
+.pay-btn {
+  background: #00e676;
+  color: #003300;
+}
+
+.pay-btn:hover {
+  background: #00c968;
+  transform: translateY(-2px);
+}
+
+.pay-btn:disabled {
+  background: #8cffc0;
+  cursor: not-allowed;
+}
+
+/* Back Button */
+.back-btn {
+  background: #ff5252;
+  color: white;
+}
+
+.back-btn:hover {
+  background: #e04646;
+  transform: translateY(-2px);
+}
+
+/* Status Message */
+.status {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 15px;
+  animation: fadeInMessage 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

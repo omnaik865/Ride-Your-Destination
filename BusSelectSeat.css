@@ -1,0 +1,152 @@
+/* Page */
+.seat-page {
+  text-align: center;
+  padding: 40px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* Bus Info Card */
+.bus-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bus-info img {
+  width: 180px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bus-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.bus-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Seat Layout */
+.seat-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 65px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Seat */
+.seat {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  background: #eaeaea;
+  border: 2px solid #333;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover */
+.seat:hover {
+  background: #d6e4ff;
+}
+
+/* Selected seat */
+.seat.selected {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* Booked seat */
+.seat.booked {
+  background: #999;
+  color: white;
+  border-color: #777;
+  cursor: not-allowed;
+}
+
+/* Seat Summary */
+.seat-summary {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.seat-summary p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Proceed Button */
+.proceed-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d4f;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.proceed-btn:hover {
+  background: #e63946;
+}
+
+.proceed-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Back Button */
+.back-btn {
+  margin-top: 20px;
+  padding: 8px 18px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .bus-info {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .seat-layout {
+    grid-template-columns: repeat(4, 55px);
+  }
+
+  .seat {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}

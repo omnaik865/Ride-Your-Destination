@@ -1,0 +1,150 @@
+/* ----------- MAIN PAGE ----------- */
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e2f, #2f2f46, #1f1f33);
+  padding: 20px;
+}
+
+/* ----------- CARD ----------- */
+.register-card {
+  width: 370px;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.register-title {
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ----------- INPUT BOXES ----------- */
+.register-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.register-form input::placeholder {
+  color: #d0d0d0;
+}
+
+.register-form input:focus {
+  border-color: #6ea8ff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(110, 168, 255, 0.6);
+}
+
+/* ----------- PASSWORD STRENGTH ----------- */
+.strength-meter {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.strength-meter.weak {
+  color: #ff4d4d;
+}
+
+.strength-meter.medium {
+  color: #ffc107;
+}
+
+.strength-meter.strong {
+  color: #4caf50;
+}
+
+/* ----------- BUTTON ----------- */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #6ea8ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(20, 20, 20);
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #8ebdff;
+}
+
+/* ----------- ERROR & SUCCESS ----------- */
+.error-box,
+.success-box {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s;
+}
+
+.error-box {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+.success-box {
+  background: rgba(0, 255, 0, 0.15);
+  color: #00ff9d;
+  border: 1px solid rgba(0, 255, 0, 0.4);
+}
+
+/* ----------- FOOTER ----------- */
+.register-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.register-footer span {
+  color: #6ea8ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-footer span:hover {
+  color: #a9cfff;
+}
+
+/* ----------- ANIMATIONS ----------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-links button {
+  background: #ff1744;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+}

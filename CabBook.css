@@ -1,0 +1,148 @@
+/* Main Container */
+.bookcab-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Booking Card */
+.bookcab-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading */
+.bookcab-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Auto/Cab Info Box */
+.cab-info-box {
+  background: #f7f9ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Form */
+.bookcab-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.bookcab-form input,
+.bookcab-form select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.bookcab-form input:focus,
+.bookcab-form select:focus {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 5px rgba(74, 108, 247, 0.3);
+}
+
+/* Button */
+.bookcab-btn {
+  background: #4a6cf7;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bookcab-btn:hover {
+  background: #3b56d8;
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background: #ff4d4d;
+  margin-top: 8px;
+}
+
+.cancel-btn:hover {
+  background: #e60000;
+}
+
+/* Success Message */
+.success-msg {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e6fffa;
+  color: #0f766e;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .bookcab-card {
+    padding: 20px;
+  }
+
+  .bookcab-title {
+    font-size: 20px;
+  }
+}
+.back-btn {
+  margin-top: 10px;
+  background: #6c757d;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #545b62;
+  transform: translateY(-2px);
+}
+.page-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}

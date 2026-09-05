@@ -1,0 +1,104 @@
+/* Container for the courier tracking card */
+.live-tracking {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.live-tracking:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Header with icons */
+.live-tracking h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Placeholder text for empty state */
+.tracking-placeholder {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  padding: 40px 0;
+  font-style: italic;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Map container styling */
+.leaflet-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  border: 2px solid #0d47a1;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.leaflet-container:hover {
+  transform: scale(1.01);
+}
+
+/* Polyline customization */
+.leaflet-polyline {
+  stroke: #1e88e5;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+/* Popup styling */
+.leaflet-popup-content {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0d47a1;
+}
+
+/* Emoji markers */
+.emoji-icon {
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Marker shadow effect */
+.leaflet-marker-icon {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.leaflet-marker-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Fade-in animation for placeholders */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .live-tracking {
+    padding: 20px;
+  }
+
+  .leaflet-container {
+    height: 280px;
+  }
+
+  .live-tracking h3 {
+    font-size: 1.1rem;
+  }
+}

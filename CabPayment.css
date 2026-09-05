@@ -1,0 +1,72 @@
+.payment-container {
+  text-align: center;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.payment-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.payment-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.payment-card h2 {
+  margin: 10px 0;
+}
+
+.payment-card p {
+  font-size: 14px;
+}
+
+.payment-card h3 {
+  color: green;
+  margin: 10px 0;
+}
+
+.payment-card button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payment-card button:hover {
+  background: #1e7e34;
+}
+.pay-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pay-btn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 8px 15px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+}

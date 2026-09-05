@@ -1,0 +1,70 @@
+.cab-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.cab-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.cab-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.85;
+}
+
+.cab-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.cab-btn {
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cab-btn.book:hover {
+  background: linear-gradient(135deg, #ffaf7b, #d76d77);
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px #ffaf7b;
+}
+
+.cab-btn.rental:hover {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px #ff5f6d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

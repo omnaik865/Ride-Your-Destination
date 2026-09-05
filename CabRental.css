@@ -1,0 +1,230 @@
+/* 🌍 Page Container */
+.cab-container {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fb;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* 🧠 Heading */
+.cab-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 🎛 Controls (Filter + Sort) */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.controls select:hover {
+  border-color: #007bff;
+}
+
+/* 🧱 Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* 🪪 Card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🖼 Image */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* 📦 Card Body */
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.card-body p {
+  color: #777;
+  font-size: 14px;
+}
+
+.card-body h4 {
+  margin: 10px 0;
+  color: #007bff;
+}
+
+/* 🔘 Buttons */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-group button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Info Button */
+.btn-group button:first-child {
+  background: #eee;
+}
+
+.btn-group button:first-child:hover {
+  background: #ddd;
+}
+
+/* Book Button */
+.book-btn {
+  background: #007bff;
+  color: white;
+}
+
+.book-btn:hover {
+  background: #0056b3;
+}
+
+/* 🪟 Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📄 Modal Content */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: crimson;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🔙 Back Button */
+.back-container {
+  margin-top: 30px;
+}
+
+.back-container button {
+  padding: 10px 18px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-container button:hover {
+  background: #000;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    margin: 5px 0;
+  }
+}
+.driver-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.driver-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.driver-info p {
+  font-size: 13px;
+  margin: 2px 0;
+}

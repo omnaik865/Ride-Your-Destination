@@ -1,0 +1,115 @@
+/* ===== Full Page Background ===== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(255, 65, 108, 0.25), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255, 75, 43, 0.25), transparent 40%),
+    linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  font-family: "Inter", "Roboto", sans-serif;
+  color: #fff;
+}
+
+/* ===== Card Container ===== */
+.login-page form {
+  width: 380px;
+  padding: 48px 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 75, 43, 0.12);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ===== Title ===== */
+.login-page h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+/* ===== Inputs ===== */
+.login-page input {
+  width: 100%;
+  padding: 16px 18px;
+  margin: 14px 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-page input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.login-page input:focus {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #ff416c;
+  box-shadow:
+    0 0 0 2px rgba(255, 65, 108, 0.35),
+    0 0 18px rgba(255, 75, 43, 0.6);
+}
+
+/* ===== Login Button ===== */
+.login-page button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 26px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  transition: all 0.35s ease;
+}
+
+.login-page button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 40px rgba(255, 75, 43, 0.7),
+    0 0 25px rgba(255, 65, 108, 0.6);
+}
+
+.login-page button:active {
+  transform: scale(0.96);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 420px) {
+  .login-page form {
+    width: 90%;
+    padding: 40px 28px;
+  }
+
+  .login-page h2 {
+    font-size: 26px;
+  }
+}

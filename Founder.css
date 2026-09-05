@@ -1,0 +1,66 @@
+/* src/pages/Founder.css */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.landing-container h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.landing-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.options-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+.option-card {
+  background: #fff;
+  color: #333;
+  width: 250px;
+  padding: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.option-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.option-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.option-card p {
+  font-size: 0.95rem;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}

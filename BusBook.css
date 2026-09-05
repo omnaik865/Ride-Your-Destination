@@ -1,0 +1,225 @@
+/* Page */
+.bus-book-page {
+  padding: 40px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.bus-book-page h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.bus-book-page p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Search */
+.search-input {
+  padding: 10px 15px;
+  width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #2d6cdf;
+  color: white;
+}
+
+.active-filter {
+  background: #2d6cdf !important;
+  color: white;
+}
+
+/* Sort */
+.sort-box {
+  margin-bottom: 25px;
+}
+
+.sort-box select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Card Info */
+.card-info {
+  padding: 15px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-type {
+  color: #777;
+  margin: 5px 0;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #2d6cdf;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-btn {
+  padding: 7px 14px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #1f8c39;
+}
+
+.info-btn {
+  padding: 7px 14px;
+  border: none;
+  background: #6c757d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.info-btn:hover {
+  background: #555;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background: #2d6cdf;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Bottom Back Button */
+.bottom-back-container {
+  margin-top: 40px;
+}
+
+.bottom-back-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  background: #2d6cdf;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottom-back-btn:hover {
+  background: #1f4fbf;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.filter-btn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.active-filter {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

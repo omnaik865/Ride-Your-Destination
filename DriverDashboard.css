@@ -1,0 +1,57 @@
+.driver-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.driver-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.driver-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 150px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ride-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ride-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.ride-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.ride-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ride-actions button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.ride-actions button:last-child {
+  background-color: #f44336;
+  color: white;
+}

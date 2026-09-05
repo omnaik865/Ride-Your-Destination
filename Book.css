@@ -1,0 +1,262 @@
+/* ======= Booking Page Styling ======= */
+.booking-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.booking-container h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00c6ff, #ebebeb);
+}
+
+/* ======= Input Section ======= */
+.input-section {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  margin-bottom: 25px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #ccc;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.5);
+}
+
+/* ======= Suggestions ======= */
+.suggestions-box {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestions-box div {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
+}
+
+.suggestions-box div:hover {
+  background: #0072ff;
+  color: #fff;
+}
+
+/* ======= Vehicle Selection ======= */
+.vehicle-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.vehicle-options button {
+  flex: 1;
+  padding: 12px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vehicle-options button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.vehicle-options button.active {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 114, 255, 0.7);
+}
+
+/* ======= Map Section ======= */
+.map-section {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ======= Vehicle Icons ======= */
+.vehicle-icon {
+  font-size: 28px;
+  text-align: center;
+}
+
+/* ======= Result Section ======= */
+.result {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 18px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.result p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #e0e0e0;
+}
+
+/* ======= Animation ======= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 600px) {
+  .booking-container {
+    padding: 15px;
+  }
+  .input-section {
+    padding: 15px;
+  }
+  .vehicle-options button {
+    font-size: 0.9rem;
+  }
+  .result p {
+    font-size: 1rem;
+  }
+}
+/* ======= Fare Summary Slide-Up Card ======= */
+.fare-card {
+  position: fixed;
+  bottom: -250px; /* initial hidden position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 25px rgba(0, 114, 255, 0.4);
+  padding: 22px 25px 30px;
+  animation: slideUp 0.7s ease-out forwards;
+  z-index: 1200;
+}
+
+.fare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.fare-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  
+}
+
+.vehicle-type {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.fare-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fare-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.fare-row.total {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00e5ff;
+}
+
+/* Animation for card slide-up */
+@keyframes slideUp {
+  from {
+    bottom: -250px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* On mobile, tighter layout */
+@media (max-width: 600px) {
+  .fare-card {
+    width: 95%;
+    padding: 18px;
+  }
+  .fare-header h3 {
+    font-size: 1.1rem;
+  }
+  .fare-row {
+    font-size: 1rem;
+  }
+}

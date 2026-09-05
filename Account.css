@@ -1,0 +1,293 @@
+/* PAGE LAYOUT */
+.account-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f2f4f7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #1f2937;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #a5b4fc;
+  text-align: center;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  background: #374151;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.sidebar button:hover {
+  background: #4b5563;
+  transform: scale(1.03);
+}
+
+.logout-btn {
+  background: #ef4444 !important;
+  margin-top: 25px;
+}
+
+.logout-btn:hover {
+  background: #dc2626 !important;
+}
+
+/* MAIN CONTENT */
+.account-content {
+  flex: 1;
+  padding: 25px;
+}
+
+/* PROFILE CARD */
+.profile-card {
+  width: 100%;
+  background: white;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.profile-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 3px solid #4f46e5;
+}
+
+.profile-right h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.profile-right p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.edit-profile-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-profile-btn:hover {
+  background: #4338ca;
+  transform: scale(1.05);
+}
+
+/* BOOKINGS */
+.booking-title {
+  margin: 25px 0 10px;
+  font-size: 22px;
+  color: #333;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  gap: 18px;
+  animation: fadeIn 0.4s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.booking-icon {
+  font-size: 45px;
+}
+
+.booking-route {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.booking-details p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* STATUS TAGS */
+.status-tag {
+  margin-top: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.status-pending {
+  background: #eab308;
+}
+
+.status-completed {
+  background: #22c55e;
+}
+
+.status-cancelled {
+  background: #ef4444;
+}
+
+/* CENTERED TEXTS */
+.no-bookings,
+.loading {
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .account-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .sidebar button {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Notifications */
+.notifications-section {
+  position: relative;
+  margin-top: 15px;
+}
+
+.notifications-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-count {
+  background: #ff3b30;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 7px;
+  margin-left: 5px;
+}
+
+.notifications-dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 280px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.notification-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item:hover {
+  background: #f0f4ff;
+}
+.booking-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.delete-btn {
+  background-color: #ff3b30;
+  color: #fff;
+}

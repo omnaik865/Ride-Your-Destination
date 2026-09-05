@@ -1,0 +1,34 @@
+.confirm-page{
+  text-align:center;
+  padding:40px;
+}
+
+.confirm-card{
+  width:500px;
+  margin:20px auto;
+  display:flex;
+  gap:20px;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+}
+
+.confirm-card img{
+  width:200px;
+  border-radius:8px;
+}
+
+.confirm-info{
+  text-align:left;
+}
+
+.pay-btn{
+  margin-top:15px;
+  padding:10px 20px;
+  background:#ff4d4d;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
